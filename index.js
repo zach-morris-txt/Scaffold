@@ -1,18 +1,19 @@
 //Instantiating; Calling Express Server
 //const dotenv = require('dotenv').config() --> require('dotenv).config()
-require('dotenv').config() //Allows Stashing Of Artificial '.env' Variable In Separate File
+//Imports
 const express = require('express')
+require('dotenv').config() //Allows Stashing Of Artificial '.env' Variable In Separate File
 const cors = require('cors')
 const morgan = require('morgan')
+const { PORT } = require('./config')
 
-
-console.log(process.env.PORT)
-console.log(process.env.HOME)
-console.log(process.env.USER)
-console.log(process.env.API_SECRET)
-const PORT = process.env.PORT || 5000 //Fallback
-
-
+//Alternative To Config.js Import
+        // //PORT Variable & Ex. Logging; From '.env' File
+        // const PORT = process.env.PORT || 5000 //Fallback
+        // console.log(process.env.PORT)
+        // console.log(process.env.HOME)
+        // console.log(process.env.USER)
+        // console.log(process.env.API_SECRET)
 
 
 //Instance Of Express App
